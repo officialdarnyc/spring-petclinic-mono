@@ -9,7 +9,6 @@ services:
       - MYSQL_URL=jdbc:mysql://mysql/petclinic
     profiles:
       - mysql
-      - postgres
     volumes:
       - ./:/app
     depends_on:
@@ -28,13 +27,3 @@ services:
       - "./conf.d:/etc/mysql/conf.d:ro"
     profiles:
       - mysql
-  postgres:
-    image: postgres:16.1
-    ports:
-      - 5432:5432
-    environment:
-      - POSTGRES_PASSWORD=petclinic
-      - POSTGRES_USER=petclinic
-      - POSTGRES_DB=petclinic
-    profiles:
-      - postgres
