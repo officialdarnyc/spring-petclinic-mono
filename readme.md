@@ -55,6 +55,6 @@ export MYSQL_PASSWORD="<your-db-password>"
 ```bash
 docker compose up -d
 ```
-4. Access the app using [http://<your-public-ip>:8080](http://<your-public-ip>:8080). If running on local PC, visit [http://localhost:8080](http://localhost:8080) in your browser to access the app.
+4. Access the app using `http://<your-public-ip>:8080`. If running on local PC, visit [http://localhost:8080](http://localhost:8080) in your browser to access the app.
 
 
