@@ -40,11 +40,16 @@ docker build -t petclinic-app . -f Dockerfile
 ```
 ## Deploy using Docker Compose
 
-1. Set the `MYSQL_PASSWORD` environment variable in your shell
+1. Set your `MYSQL_PASSWORD` environment variable in your shell
 ```bash
 export MYSQL_PASSWORD="<your-db-password>"
 ```
-2. From the root directory, run the command to deploy the petclinic app and a MySQL DB:
+2. Download the compose file:
+```bash
+curl -L https://raw.githubusercontent.com/officialdarnyc/spring-petclinic-mono/main/docker-compose.yml -O
+```
+
+2. Run the command to deploy the petclinic app and a MySQL DB server:
 ```bash
 docker compose up -d
 ```
