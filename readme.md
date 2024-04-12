@@ -36,7 +36,7 @@ Or you can run it from Maven directly using the Spring Boot Maven plugin. If you
 From the root directory, run the command to build the container image:
 
 ```bash
-docker build -t petclinic-app . -f Dockerfile
+docker build -t petclinic-app . -f Dockerfile.multi
 ```
 
 ## Deploy using Docker Compose
