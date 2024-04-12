@@ -1,7 +1,7 @@
 
 services:
   petclinic-app:
-    image: officialdarnyc/petclinic-app:v1
+    image: officialdarnyc/petclinic-app:amdv2
     deploy:
       mode: replicated
       replicas: 1
