@@ -41,20 +41,33 @@ docker build -t petclinic-app . -f Dockerfile.multi
 
 ## Deploy using Docker Compose
 
-1. Download the compose file:
+The section assumes you have docker installed. If it's not, execute steps 1 and 2.
+
+1. Install docker using Docker's official helper script:
+```bash
+curl -L https://get.docker.com | sh
+```
+
+2. Run Docker commands without using sudo, add the current user to the Docker group and then reboot using the following commands:
+```bash
+sudo usermod -aG docker $USER
+sudo reboot
+```
+
+3. Download the compose file:
 ```bash
 curl -L https://raw.githubusercontent.com/officialdarnyc/spring-petclinic-mono/main/docker-compose.yml -O
 ```
 
-2. Set your `MYSQL_PASSWORD` environment variable in your shell
+4. Set your `MYSQL_PASSWORD` environment variable in your shell
 ```bash
 export MYSQL_PASSWORD="<your-db-password>"
 ```
 
-3. Run the command to deploy the petclinic app and a MySQL DB server:
+5. Run the command to deploy the petclinic app and a MySQL DB server:
 ```bash
-docker compose up -d
+sudo docker compose up -d
 ```
-4. Access the app using `http://<your-public-ip>:8080`. If running on local PC, visit [http://localhost:8080](http://localhost:8080) in your browser to access the app.
+6. Access the app using `http://<your-public-ip>:8080`. If running on local PC, visit [http://localhost:8080](http://localhost:8080) in your browser to access the app.
 
 
